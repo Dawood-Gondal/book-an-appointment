@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category    M2Commerce Enterprise
+ * @package     M2Commerce_BookAnAppointment
+ * @copyright   Copyright (c) 2023 M2Commerce Enterprise
+ * @author      dawoodgondaldev@gmail.com
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="commerce_enterprise" translate="label" sortOrder="200">
+            <label>Commerce Enterprise</label>
+        </tab>
+        <section id="appointment" translate="label" type="text" sortOrder="42" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Book An Appointment</label>
+            <tab>commerce_enterprise</tab>
+            <resource>M2Commerce_BookAnAppointment::bookAnAppointmentConfig</resource>
+            <group id="general" translate="label" sortOrder="92" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Setting</label>
+                <field id="email_subject" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Email Subject</label>
+                    <validate>required-entry</validate>
+                </field>
+                <field id="receiver_email" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Receiver Email Address</label>
+                    <validate>required-entry</validate>
+                    <comment>
+                        <![CDATA[Please enter single id or comma separated email ids for multiple ids.]]>
+                    </comment>
+                    <tooltip>email@sample.com OR email@sample.com,email2@sample.com,email3@sample.com</tooltip>
+                </field>
+                <field id="email_template" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Book Appointment Email Template</label>
+                    <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
