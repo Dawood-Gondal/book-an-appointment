@@ -14,7 +14,7 @@
                 <resource id="Magento_Backend::stores">
                     <resource id="Magento_Backend::stores_settings">
                         <resource id="Magento_Config::config">
-                            <resource id="M2Commerce_BookAnAppointment::bookAnAppointmentConfig" title="CE - Book an Appointment Config" />
+                            <resource id="M2Commerce_BookAnAppointment::bookAnAppointmentConfig" title="M2C - Book an Appointment Config" />
                         </resource>
                     </resource>
                 </resource>
