@@ -15,11 +15,9 @@ $product = $productViewBlock->getProduct();
 ?>
 
 <?php if($product->getBookAppointment()): ?>
-    <div data-mage-init='{"appointmentJs": {}}'>
-        <a href="#" id="click-appointment" data-role="book-appointment" class="action book-appointment">
-            <span><?= $block->escapeHtml(__('Book an Appointment')) ?></span>
-        </a>
-    </div>
+    <a href="#" id="click-appointment" data-role="book-appointment" class="action book-appointment">
+        <span><?= $block->escapeHtml(__('Book an Appointment')) ?></span>
+    </a>
     <div id="book-appointment-popup" class="book-appointment-modal" style="display: none;">
         <div class="appointment-msg-div">
         </div>
@@ -63,4 +61,11 @@ $product = $productViewBlock->getProduct();
             </div>
         </form>
     </div>
+    <script type="text/x-magento-init">
+        {
+            "#click-appointment": {
+                "appointmentJs": {}
+            }
+        }
+    </script>
 <?php endif; ?>
